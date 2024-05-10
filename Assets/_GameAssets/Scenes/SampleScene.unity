@@ -954,7 +954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &462083096
 Transform:
   m_ObjectHideFlags: 0
@@ -1883,7 +1883,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &952087287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1975,7 +1975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -2043,8 +2043,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.243348, y: -0.4007919, z: 0.11131015, w: 0.87621784}
-  m_LocalPosition: {x: 24.39707, y: 11.18903, z: -49.760883}
+  m_LocalRotation: {x: 0.0031914674, y: -0.9497201, z: 0.31293422, w: 0.009683728}
+  m_LocalPosition: {x: 9.588652, y: 8.989765, z: 13.177567}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2403,7 +2403,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1120920683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2708,7 +2708,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1258065375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2798,8 +2798,9 @@ GameObject:
   - component: {fileID: 1285544760}
   - component: {fileID: 1285544762}
   - component: {fileID: 1285544763}
+  - component: {fileID: 1285544764}
   m_Layer: 0
-  m_Name: NPC-Rubito
+  m_Name: NPC-Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2875,6 +2876,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9abd9832ad1ae764c9a1913b854d01e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1285544764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1285544759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81bface1cc6dc284f84fea8d570c0670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetName: Player
+  speed: 3
+  followDistance: 5
+  attackDistance: 2
 --- !u!1 &1297436987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2892,7 +2909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1297436989
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3043,7 +3060,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1183024399 &1325062469
 LookAtConstraint:
   m_ObjectHideFlags: 0
@@ -3072,7 +3089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325062468}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.0034761867, y: 0.9954973, z: 0.040387817, w: 0.08568493}
+  m_LocalRotation: {x: -0.21643773, y: -0.479068, z: -0.123188004, w: 0.8417085}
   m_LocalPosition: {x: 13.928688, y: 6.21, z: 10.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3345,17 +3362,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3381235039361383128, guid: bb51719f1fd156f41877bc033f36c606, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4671222427939944055, guid: bb51719f1fd156f41877bc033f36c606, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 15.47
       objectReference: {fileID: 0}
     - target: {fileID: 4671222427939944055, guid: bb51719f1fd156f41877bc033f36c606, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.05
       objectReference: {fileID: 0}
     - target: {fileID: 4671222427939944055, guid: bb51719f1fd156f41877bc033f36c606, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -26.8
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4671222427939944055, guid: bb51719f1fd156f41877bc033f36c606, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3395,7 +3416,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b614f09dade340f4aa841aafe3df42b9, type: 2}
     - target: {fileID: 6322398255041165208, guid: bb51719f1fd156f41877bc033f36c606, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6964176169040178914, guid: bb51719f1fd156f41877bc033f36c606, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4604,7 +4625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2085971976
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4671,7 +4692,7 @@ Transform:
   m_GameObject: {fileID: 2085971975}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.9226785, z: -0, w: 0.3855704}
-  m_LocalPosition: {x: 1.9, y: 1.28, z: 3.33}
+  m_LocalPosition: {x: -2.44, y: 1.28, z: 1.53}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5450,6 +5471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemigoFijo
       objectReference: {fileID: 0}
+    - target: {fileID: 2045770957058335716, guid: ca37286650b6e524d8943dc457b3f0af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7155605284923523301, guid: ca37286650b6e524d8943dc457b3f0af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.061785
@@ -5596,7 +5621,7 @@ Transform:
   m_GameObject: {fileID: 6893654073117098134}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.9226785, z: -0, w: 0.3855704}
-  m_LocalPosition: {x: 8.69, y: 1.28, z: -3.54}
+  m_LocalPosition: {x: -1.94, y: 1.28, z: -5.99}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5741,7 +5766,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &6893654073117098135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5801,16 +5826,16 @@ SceneRoots:
   - {fileID: 248029427}
   - {fileID: 1640962615}
   - {fileID: 1593224500}
-  - {fileID: 1788668224}
-  - {fileID: 1285544761}
   - {fileID: 382908987}
   - {fileID: 4641324580085361265}
   - {fileID: 2085971979}
   - {fileID: 1120920686}
   - {fileID: 1325062470}
-  - {fileID: 1627766051}
   - {fileID: 462083096}
   - {fileID: 1258065379}
   - {fileID: 1297436990}
   - {fileID: 952087290}
   - {fileID: 953562903934305753}
+  - {fileID: 1788668224}
+  - {fileID: 1285544761}
+  - {fileID: 1627766051}
